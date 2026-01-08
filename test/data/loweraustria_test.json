@@ -1,0 +1,90 @@
+[
+    {
+        "text": "A12345SRS (08:50) S1+ATS+MESS Gefahrenmeldeanlage - Schadstoff/Gas. BMA-1 140, Florian Feuerstraße 120/Stg. 5, 3430 Tulln (Türe 2): Rettung auf anfahrt (48.1234, 16.1234)",
+        "expected": {
+            "type": "A",
+            "firedepartmentNumber": 12345,
+            "group": "SRS",
+            "time": "08:50",
+            "alarmType": "S",
+            "alarmLevel": 1,
+            "alarmAccessories": "ATS+MESS",
+            "alarmText": "Gefahrenmeldeanlage - Schadstoff/Gas",
+            "object": "BMA-1 140",
+            "street": "Florian Feuerstraße",
+            "housenumber": "120/Stg. 5",
+            "zip": 3430,
+            "city": "Tulln",
+            "addressAdditional": "Türe 2",
+            "note": "Rettung auf anfahrt",
+            "latitude": 48.1234,
+            "longitude": 16.1234
+        }
+    },
+    {
+        "text": "A12345SRS (08:50) B1 Gefahrenmeldeanlage - Brand. Florian Feuerstraße 122, 3430 Tulln: Pers in Lift Nr:D 1234 (48.1234, 16.1234)",
+        "expected": {
+            "type": "A",
+            "firedepartmentNumber": 12345,
+            "group": "SRS",
+            "time": "08:50",
+            "alarmType": "B",
+            "alarmLevel": 1,
+            "alarmAccessories": null,
+            "alarmText": "Gefahrenmeldeanlage - Brand",
+            "object": null,
+            "street": "Florian Feuerstraße",
+            "housenumber": "122",
+            "zip": 3430,
+            "city": "Tulln",
+            "addressAdditional": null,
+            "note": "Pers in Lift Nr:D 1234",
+            "latitude": 48.1234,
+            "longitude": 16.1234
+        }
+    },
+    {
+        "text": "A12345SRS (08:50) T1 Bergung - PKW. B00 km 0.0 (Wien): PKW gegen Schild (48.1234, 16.1234)",
+        "expected": {
+            "type": "A",
+            "firedepartmentNumber": 12345,
+            "group": "SRS",
+            "time": "08:50",
+            "alarmType": "T",
+            "alarmLevel": 1,
+            "alarmAccessories": null,
+            "alarmText": "Bergung - PKW",
+            "object": "B00 km 0.0 (Wien)",
+            "street": null,
+            "housenumber": null,
+            "zip": null,
+            "city": null,
+            "addressAdditional": null,
+            "note": "PKW gegen Schild",
+            "latitude": 48.1234,
+            "longitude": 16.1234
+        }
+    },
+    {
+        "text": "A12345SRS (08:50) SOF1 Anforderung von anderer Organisation. Florian Feuerstraße 123, 3430 Tulln (48.1234, 16.1234)",
+        "expected": {
+            "type": "A",
+            "firedepartmentNumber": 12345,
+            "group": "SRS",
+            "time": "08:50",
+            "alarmType": "SOF",
+            "alarmLevel": 1,
+            "alarmAccessories": null,
+            "alarmText": "Anforderung von anderer Organisation",
+            "object": null,
+            "street": "Florian Feuerstraße",
+            "housenumber": "123",
+            "zip": 3430,
+            "city": "Tulln",
+            "addressAdditional": null,
+            "note": null,
+            "latitude": 48.1234,
+            "longitude": 16.1234
+        }
+    }
+]
