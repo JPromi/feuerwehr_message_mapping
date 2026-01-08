@@ -18,4 +18,24 @@ Dieses Projekt ermöglicht die standardisierte Erfassung und Verarbeitung von Al
 
 ## Verwendung
 
-Weitere Informationen zu den regionalen Mappings finden Sie in den jeweiligen Dokumentationen.
+Weitere Informationen zu den jeweiligen Mappings finden Sie in den jeweiligen Dokumentationen.
+
+# Development
+
+## Regex-Konfiguration
+
+Die Regex-Definitionen sind als JSON-Dateien im Ordner `integrations/` abgelegt.  
+Dort werden die jeweiligen Mappings und Felder konfiguriert.
+
+Code- und Konfigurationsbeispiele befinden sich im Verzeichnis `example/` und zeigen die korrekte Verwendung der JSON-Strukturen.
+
+## Unit-Tests
+Für dieses Projekt sind Unit-Tests vorhanden.  
+Diese befinden sich im Ordner `test` und können mit folgendem Befehl ausgeführt werden:
+
+```bash
+node test.js
+```
+
+Die zugehörigen Testdaten liegen im Verzeichnis `test/data`.
+Für jedes Mapping existieren dort eigene Testdaten, um die korrekte Verarbeitung sicherzustellen.

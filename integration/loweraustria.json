@@ -1,0 +1,73 @@
+{
+  "flags": "m",
+  "fields": {
+    "type": {
+      "regex": "^([A-Za-z]+)",
+      "type": "string"
+    },
+    "firedepartmentNumber": {
+      "regex": "^\\D*(\\d+)",
+      "type": "int"
+    },
+    "group": {
+      "regex": "^\\D*\\d+([A-Za-z]+)",
+      "type": "string"
+    },
+    "time": {
+      "regex": "\\((\\d{1,2}:\\d{2})\\)",
+      "type": "time"
+    },
+    "alarmType": {
+      "regex": "\\)\\s+([A-Za-z]+)(?=\\d)",
+      "type": "string"
+    },
+    "alarmLevel": {
+      "regex": "\\)\\s+[A-Za-z]+(\\d+)",
+      "type": "int"
+    },
+    "alarmAccessories": {
+      "regex": "\\+([^\\s+]+(?:\\+[^\\s+]+)*)",
+      "type": "string"
+    },
+    "alarmText": {
+      "regex": "\\)\\s+\\S+\\s+(.*?)\\.",
+      "type": "string"
+    },
+    "object": {
+      "regex": "\\.\\s*(?:([^,:\\n]+)\\s*(?=,[^\\n]*,[^\\n]*(?::|\\(\\d))|([^,:\\n]+)\\s*(?=[^,\\n]*(?::|\\(\\d)))",
+      "type": "string"
+    },
+    "street": {
+      "regex": "\\.\\s*(?:[^,]+,\\s*)?([^,\\d]+?)\\s+\\d[^,]*(?=,)",
+      "type": "string"
+    },
+    "housenumber": {
+      "regex": "\\.\\s*(?:[^,]+,\\s*)?[^,\\d]+?\\s+(\\d[^,]*)(?=,\\s*\\d{4})",
+      "type": "string"
+    },
+    "zip": {
+      "regex": ",\\s*(\\d{4})(?=\\s+\\D)",
+      "type": "int"
+    },
+    "city": {
+      "regex": ",\\s*\\d{4}\\s+([^:(]+?)(?=\\s*(?:[:(,]|$))",
+      "type": "string"
+    },
+    "addressAdditional": {
+      "regex": ",\\s*\\d{4}\\s+[^:(]+?\\s*\\((?!\\s*[-\\d.,]+\\s*,\\s*[-\\d.,]+)([^)]*)\\)(?=\\s*:\\s*|\\s*\\()",
+      "type": "string"
+    },
+    "note": {
+      "regex": "(?<!\\d):\\s*(.*?)(?=\\s*\\([^()]*\\)\\s*$)",
+      "type": "string"
+    },
+    "latitude": {
+      "regex": "\\(([-\\d.,]+)\\s*,\\s*[-\\d.,]+\\)\\s*$",
+      "type": "float"
+    },
+    "longitude": {
+      "regex": "\\(\\s*[-\\d.,]+\\s*,\\s*([-\\d.,]+)\\)\\s*$",
+      "type": "float"
+    }
+  }
+}
